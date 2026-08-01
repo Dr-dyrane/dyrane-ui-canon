@@ -1,10 +1,10 @@
 # Dyrane UI Canon — Status
 
 - Last updated: 2026-08-01
-- Repository phase: Repository archaeology and reference extraction
-- Active pass: `passes/PASS-001-repository-archaeology.md`
-- Next pass to open: PASS-002 — Design Evolution Timeline
+- Repository phase: Deep repository archaeology and evolution reconstruction
+- Active passes: `PASS-001-repository-archaeology.md`, `PASS-002-design-evolution-timeline.md`
 - Reference implementation: `Dr-dyrane/planned` / My Finance
+- Historical bridge: `Dr-dyrane/ivisit-console`
 - Canon maturity: Pre-alpha
 - Next command: `continue`
 
@@ -12,117 +12,105 @@
 
 Extract the durable Dyrane UI system from the portfolio, validate it against strong external interaction guidance, and publish it as a reference system that can govern future Dyrane products without forcing visual sameness.
 
-## Current position
+## Completed foundation
 
-### Completed
+- Research method and scoring framework.
+- Apple HIG adaptation policy.
+- ADR-0001: research and new-build reference dual purpose.
+- Continuity and pass-control protocol.
+- Fifty-repository primary inventory.
+- Initial My Finance reference audit.
+- Dedicated My Finance identity and signal-color tracks.
+- PASS-002 evolution timeline opened.
+- First iVisit Console structured audit.
+- My Finance identity decision history reconstructed from commits.
 
-- Repository created and made writable.
-- Research method and project scoring framework established.
-- Apple HIG adaptation policy started.
-- ADR-0001 accepted: the canon is both a research system and a new-build reference system.
-- Continuity protocol established.
-- Fifty UI-bearing repository candidates normalized and assigned an audit wave/depth.
-- Coursework, backend-only, empty, clone and unresolved low-evidence repositories separated from primary scoring.
-- My Finance provisional reference audit started.
-- My Finance Identity Architecture extracted into a dedicated research document.
-- My Finance Semantic Signal Color extracted into a dedicated research document.
+## Current evidence-backed position
 
-### Active
+### Portfolio normalization
 
-- Complete the My Finance D4 reference audit.
-- Open and run PASS-002 for the design evolution timeline.
-- Audit Wave 1 comparison products.
-- Validate whether Identity Orb is a finance-specific renderer or a general Dyrane identity architecture.
-- Validate semantic signal behavior across finance, emergency, map-first and consumer profiles.
+- Owned repositories discovered: more than 70.
+- Primary UI-bearing inventory: 50.
+- Excluded from visual authority: coursework, clones, backend-only repositories, empty shells and insufficient-evidence projects.
 
-### Not started or incomplete
+### Deep audits
 
-- Fifteen structured/deep product audits required for PASS-001 exit.
-- Complete portfolio scorecard.
-- Evidence-backed evolution timeline.
-- Final Identity Language canon chapter.
-- Final Signal Color canon chapter.
-- Product profiles.
-- Project design-contract template.
-- Machine-readable canon schema.
-- Token packages.
-- Compliance tooling.
+- My Finance: D4 in progress.
+- iVisit Console: D2 complete enough for provisional scoring; D3 targeted inspection in progress.
+- Remaining first wave: iVisit App, WetinDey, Jelo, AU Mosaic, Sanctum, Capsule.
+
+### Evolution finding
+
+The current evidence does not support presenting borderless UI as a timeless Dyrane trait.
+
+The strongest verified chronology is:
+
+1. early product and framework experimentation;
+2. richer domain dashboards and record systems;
+3. iVisit operational pressure;
+4. July 6–10, 2026 iVisit Console pivot to borderless grammar, semantic hues, truthful loading and design harnesses;
+5. July 30–31, 2026 My Finance refinement into semantic registries and role ownership;
+6. present canon extraction.
+
+### Identity finding
+
+The strongest My Finance contribution is not the orb shape alone. It is governed semantic-role ownership:
+
+- entity identity;
+- fact/measure identity;
+- action identity;
+- status grammar;
+- navigation grammar.
+
+Glyph carries the non-text distinction. Tone reinforces it. Status does not replace identity.
+
+### Signal-color finding
+
+Color responsibilities are being separated into identity, signal, interaction, data and atmosphere. Brand color does not automatically own active, selected, successful or important states.
 
 ## Quantitative progress
 
-- Owned repositories discovered: more than 70
-- Target repositories normalized: 50 / 50
-- Reference candidates assigned deep audit: 16
-- Deep audits completed: 0 final
-- Deep audit in progress: My Finance
-- Dedicated research tracks documented: 2
-- Canon laws accepted: 0
-- ADRs accepted: 1
-- Canon rules promoted: 0 final; 15 identity/signal candidates documented
-- Reference profiles completed: 0
-- Automated canon checks completed: 0
-
-## Current validated-pattern candidates
-
-These are stronger than informal hypotheses but are not final canon until cross-project validation.
-
-### Identity
-
-1. Identity precedes content.
-2. Identity is resolved through a semantic registry rather than improvised at feature call sites.
-3. Durable identity must remain separate from temporary status and navigation.
-4. Glyph carries the primary distinction; tone reinforces it.
-5. A referenced entity retains its own identity across surfaces.
-6. Repeated facts and aggregates may have identity when they represent stable measures.
-7. Legitimate identity-less surfaces should be explicitly classified.
-
-### Color and signal
-
-1. Every color use must declare whether it serves identity, signal, interaction, data or atmosphere.
-2. Identity tone does not imply health, urgency or judgment.
-3. Signal should be placed near the condition it describes before escalating globally.
-4. Signal intensity should match consequence and reversibility.
-5. Meaning must survive without hue.
-6. Neutrality preserves attention contrast.
-7. Continuous measures and true thresholds require different visual treatment.
-8. Stable identity and changing progress should remain separable.
+- Primary repositories normalized: 50 / 50.
+- Structured project audits: 2 in progress/completed provisionally.
+- Dated evolution milestones documented: 9 initial.
+- Dedicated research tracks: identity, signal color, page grammar, motion/feedback, product intelligence.
+- Candidate rules documented: more than 20.
+- Final canon laws promoted: 0.
+- Reference profiles completed: 0.
+- Automated cross-repository canon checks: 0.
 
 ## Known risks
 
-- Overfitting the canon to My Finance.
-- Confusing recent preferences with durable portfolio-wide principles.
-- Treating framework defaults as authored Dyrane decisions.
-- Promoting attractive one-off treatments without cross-project evidence.
-- Documenting Apple conventions without adapting them to web, PWA and React Native realities.
-- Creating too much research material without a compact build-facing reference layer.
-- Allowing Icon Orb or semantic color to become mandatory where another identity mechanism is more appropriate.
-- Mistaking visual variation in identity tones for semantic necessity.
-- Inventing a universal green/yellow/red ladder when some product profiles require different signal semantics.
+- Overfitting to the intense July 2026 design work.
+- Mistaking agent-written commit language for founder-originated doctrine.
+- Under-inspecting older products and falsely declaring later firsts.
+- Assigning high visual scores from code and commit history without rendered evidence.
+- Treating borderlessness as an absolute rather than a hierarchy rule.
+- Allowing Icon Orb to become mandatory where imagery, avatars or map pins are stronger identity carriers.
 
 ## Immediate next actions
 
-Unless explicitly redirected, `continue` means execute these in order:
+`continue` now means:
 
-1. Create PASS-002 — Design Evolution Timeline.
-2. Gather chronology and first-seen evidence across Wave 1 repositories.
-3. Deepen My Finance around actual identity-tone CSS, contrast, donuts/rings, threshold logic, motion, feedback and responsive topology.
-4. Begin structured audits for iVisit Console and iVisit App.
-5. Select evidence from WetinDey and Jelo that challenges or validates finance-derived rules.
-6. Start the provisional portfolio scorecard.
-7. Update this file and all active passes.
+1. Inspect iVisit Console’s actual mobile/desktop design-system documents and identity primitives.
+2. Audit iVisit App at D2, including map-first topology, emergency phases, feedback and motion.
+3. Search older Wave 1–3 products for ancestors of borderlessness, identity discs and semantic color.
+4. Inspect My Finance CSS tone values, contrast behavior, progress rings and threshold logic.
+5. Add dated milestones for at least five more products.
+6. Start the provisional portfolio scorecard with confidence labels.
+7. Update both active passes and this status file.
 
 ## Resume protocol
 
-A new session should read, in order:
+Read in order:
 
 1. `STATUS.md`
 2. `decisions/ADR-0001-canon-as-research-and-reference-system.md`
-3. all active pass documents
-4. `methodology/research-method.md`
-5. `methodology/scoring-framework.md`
-6. `research/repository-inventory.md`
-7. `research/projects/planned.md`
-8. `research/my-finance-identity-architecture.md`
-9. `research/my-finance-semantic-signal-color.md`
+3. `passes/PASS-001-repository-archaeology.md`
+4. `passes/PASS-002-design-evolution-timeline.md`
+5. `research/evolution-timeline.md` or the active timeline document
+6. `research/projects/planned.md`
+7. `research/projects/planned-identity-decision-history.md`
+8. `research/projects/ivisit-console.md`
 
-Then continue from **Immediate next actions** without restarting discovery.
+Continue from **Immediate next actions** without rebuilding the inventory.
