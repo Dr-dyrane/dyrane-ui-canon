@@ -1,10 +1,11 @@
 # Dyrane UI Canon — Status
 
 - Last updated: 2026-08-01
-- Repository phase: Deep repository archaeology and evolution reconstruction
-- Active passes: `PASS-001-repository-archaeology.md`, `PASS-002-design-evolution-timeline.md`
+- Repository phase: Multi-pass iVisit archaeology and cross-system formalization
+- Active passes: `PASS-001`, `PASS-002`, `PASS-003`, `PASS-004`, `PASS-005`, `PASS-006`
 - Reference implementation: `Dr-dyrane/planned` / My Finance
 - Historical bridge: `Dr-dyrane/ivisit-console`
+- Interaction-philosophy source: `Dr-dyrane/ivisit-app`
 - Canon maturity: Pre-alpha
 - Next command: `continue`
 
@@ -20,61 +21,63 @@ Extract the durable Dyrane UI system from the portfolio, validate it against str
 - Continuity and pass-control protocol.
 - Fifty-repository primary inventory.
 - Initial My Finance reference audit.
-- Dedicated My Finance identity and signal-color tracks.
-- PASS-002 evolution timeline opened.
-- First iVisit Console structured audit.
-- My Finance identity decision history reconstructed from commits.
+- My Finance identity, signal-color and identity-decision-history tracks.
+- iVisit Console structured audit and July 2026 borderless pivot chronology.
+- iVisit App map-first archaeology.
+- Spatial Truth history.
+- Current map sheet architecture audit.
+- Source-level shell, detent and gesture audit.
+- Active motion, interaction, accessibility and navigation passes.
 
 ## Current evidence-backed position
 
-### Portfolio normalization
-
-- Owned repositories discovered: more than 70.
-- Primary UI-bearing inventory: 50.
-- Excluded from visual authority: coursework, clones, backend-only repositories, empty shells and insufficient-evidence projects.
-
-### Deep audits
-
-- My Finance: D4 in progress.
-- iVisit Console: D2 complete enough for provisional scoring; D3 targeted inspection in progress.
-- Remaining first wave: iVisit App, WetinDey, Jelo, AU Mosaic, Sanctum, Capsule.
-
-### Evolution finding
-
-The current evidence does not support presenting borderless UI as a timeless Dyrane trait.
+### Portfolio chronology
 
 The strongest verified chronology is:
 
 1. early product and framework experimentation;
 2. richer domain dashboards and record systems;
-3. iVisit operational pressure;
-4. July 6–10, 2026 iVisit Console pivot to borderless grammar, semantic hues, truthful loading and design harnesses;
-5. July 30–31, 2026 My Finance refinement into semantic registries and role ownership;
-6. present canon extraction.
+3. iVisit App develops persistent spatial truth, staged commitment and map/sheet continuity;
+4. iVisit Console converts visual taste into shared borderless grammar and enforcement;
+5. My Finance converts the grammar into semantic role ownership and executable registries;
+6. the canon extracts the durable cross-product system.
 
-### Identity finding
+### iVisit App contribution
 
-The strongest My Finance contribution is not the orb shape alone. It is governed semantic-role ownership:
+iVisit App is currently the strongest source for:
 
-- entity identity;
-- fact/measure identity;
-- action identity;
-- status grammar;
-- navigation grammar.
+- persistent truth layers;
+- progressive commitment;
+- one dominant decision per phase;
+- persistent shell with changing phase;
+- consequence-specific feedback;
+- lifecycle-aware tracking;
+- spatial navigation;
+- direct-manipulation sheet motion.
 
-Glyph carries the non-text distinction. Tone reinforces it. Status does not replace identity.
+### Motion finding
 
-### Signal-color finding
+The map sheet animates structural height and derives chrome from one continuous progress value. Direct manipulation previews posture; distance and velocity gates commit semantic state on release. Motion differs by platform but remains centrally tokenized.
 
-Color responsibilities are being separated into identity, signal, interaction, data and atmosphere. Brand color does not automatically own active, selected, successful or important states.
+### Interaction finding
+
+Gesture ownership is explicit. Scroll owns content exploration; detents commit only at boundaries. Tracking action availability is derived from lifecycle policy, and foreground async work remains attached to the initiating action.
+
+### Accessibility finding
+
+Tracking contains real reduced-motion handling and phase-local expand/collapse labels. The shared phase transition and base sheet handle do not yet expose equivalent reduced-motion, posture semantics, custom actions, focus transfer or announcements.
+
+### Navigation finding
+
+The current model separates truth layer, viewport, persistent shell, phase and detail. Navigation state includes provenance and source posture, not only destination.
 
 ## Quantitative progress
 
 - Primary repositories normalized: 50 / 50.
-- Structured project audits: 2 in progress/completed provisionally.
-- Dated evolution milestones documented: 9 initial.
-- Dedicated research tracks: identity, signal color, page grammar, motion/feedback, product intelligence.
-- Candidate rules documented: more than 20.
+- Structured project audits: My Finance, iVisit Console, iVisit App.
+- Dated evolution milestones documented: more than 15.
+- Active passes: 6.
+- Candidate rules documented: more than 35.
 - Final canon laws promoted: 0.
 - Reference profiles completed: 0.
 - Automated cross-repository canon checks: 0.
@@ -83,22 +86,22 @@ Color responsibilities are being separated into identity, signal, interaction, d
 
 - Overfitting to the intense July 2026 design work.
 - Mistaking agent-written commit language for founder-originated doctrine.
-- Under-inspecting older products and falsely declaring later firsts.
 - Assigning high visual scores from code and commit history without rendered evidence.
 - Treating borderlessness as an absolute rather than a hierarchy rule.
-- Allowing Icon Orb to become mandatory where imagery, avatars or map pins are stronger identity carriers.
+- Treating Icon Orb as universal where imagery, avatars or pins are stronger.
+- Promoting map-specific interactions into universal laws too early.
+- Confusing documentation intent with verified runtime behavior.
 
 ## Immediate next actions
 
 `continue` now means:
 
-1. Inspect iVisit Console’s actual mobile/desktop design-system documents and identity primitives.
-2. Audit iVisit App at D2, including map-first topology, emergency phases, feedback and motion.
-3. Search older Wave 1–3 products for ancestors of borderlessness, identity discs and semantic color.
-4. Inspect My Finance CSS tone values, contrast behavior, progress rings and threshold logic.
-5. Add dated milestones for at least five more products.
-6. Start the provisional portfolio scorecard with confidence labels.
-7. Update both active passes and this status file.
+1. Finish `MapTrackingStageBase` and `useMapTrackingController` source audit through completion, cancellation, rating recovery and destructive actions.
+2. Audit camera padding, map fitting and viewport authority in active `/map` implementation.
+3. Build the phase-by-phase accessibility matrix across explore, search, hospital detail, commitment, payment and tracking.
+4. Search the full map source for `useReducedMotion`, accessibility actions, announcements and focus management.
+5. Compare the validated motion/navigation findings against My Finance sheets, inspectors and new bottom bar when ready.
+6. Update PASS-002 through PASS-006 and this file after each wave.
 
 ## Resume protocol
 
@@ -106,11 +109,13 @@ Read in order:
 
 1. `STATUS.md`
 2. `decisions/ADR-0001-canon-as-research-and-reference-system.md`
-3. `passes/PASS-001-repository-archaeology.md`
-4. `passes/PASS-002-design-evolution-timeline.md`
-5. `research/evolution-timeline.md` or the active timeline document
-6. `research/projects/planned.md`
-7. `research/projects/planned-identity-decision-history.md`
-8. `research/projects/ivisit-console.md`
+3. `passes/PASS-002-design-evolution-timeline.md`
+4. `passes/PASS-003-motion.md`
+5. `passes/PASS-004-interaction.md`
+6. `passes/PASS-005-accessibility.md`
+7. `passes/PASS-006-navigation.md`
+8. `research/projects/ivisit-app.md`
+9. `research/projects/ivisit-app-current-map-sheet-system.md`
+10. `research/projects/ivisit-app-map-sheet-shell-audit.md`
 
-Continue from **Immediate next actions** without rebuilding the inventory.
+Continue from **Immediate next actions** without restarting the inventory or repeating planning.
