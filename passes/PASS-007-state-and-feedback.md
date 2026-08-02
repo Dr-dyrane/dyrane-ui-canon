@@ -67,7 +67,7 @@ Candidate rule:
 
 ### Tracking controller outcomes
 
-The tracking controller now provides source-level evidence for a complete feedback sequence:
+The tracking controller provides source-level evidence for a complete feedback sequence:
 
 ```text
 Intent
@@ -125,21 +125,97 @@ Candidate rule:
 
 > Preserve user intent through the nearest honest fallback without pretending the fallback is equivalent to the preferred capability.
 
-## Feedback model under investigation
+### Screen-level rating recovery
+
+The rating renderer is owned by `MapScreen`, not by the transient tracking phase. This prevents a phase transition from unmounting a consequence that still requires user resolution.
+
+Candidate rule:
+
+> A consequence that must survive a phase transition must be owned above the phase that initiated it.
+
+The rating state is persisted locally but validated against canonical visits before presentation. A server-rated visit closes the local modal; a just-completed handoff may survive a short query lag only when completion was explicitly committed.
+
+Candidate rule:
+
+> Persisted presentation state must be revalidated against authoritative truth before restoration.
+
+### Recovery without local metadata
+
+A local rating claim narrows recovery when available, but a fresh device can still recover a completed, unrated emergency visit from canonical visit truth.
+
+Candidate rule:
+
+> Local recovery metadata may accelerate or disambiguate restoration, but canonical unresolved consequences must remain recoverable without it.
+
+### Duplicate recovery prevention
+
+Skip and submit resolution close every discovery path before terminal cleanup:
+
+1. resolve the rating action;
+2. suppress same-session rediscovery;
+3. remove the recovery claim;
+4. clear visible rating state;
+5. clean up terminal tracking;
+6. refetch authoritative visit state;
+7. report the resolved outcome.
+
+Candidate rule:
+
+> Recovery systems must close every rediscovery path before removing the state that currently suppresses rediscovery.
+
+### Partial success
+
+Rating submission can succeed while an optional tip fails. The resulting feedback reports the committed feedback separately from the unresolved tip.
+
+Candidate rule:
+
+> Compound actions must report committed results and unresolved remainders separately.
+
+### Cancellation and cleanup
+
+Ambulance and bed cancellation mutate authoritative request status before local trip cleanup. Cleanup runs only on success unless an explicit failure-cleanup policy exists.
+
+Candidate rule:
+
+> Destructive cleanup follows confirmed authoritative mutation; failure preserves current truth and its recovery path.
+
+### Responder-owned completion
+
+Patient-side completion handlers do not manufacture completed state. They return a pending result until the authoritative request is already completed by the responder or hospital.
+
+Candidate rule:
+
+> A participant may acknowledge or continue a lifecycle transition without owning authority to create it.
+
+### Arrival acknowledgement
+
+Patient acknowledgement is available only after canonical arrival. It confirms an event that already exists; it does not create arrival.
+
+Candidate rule:
+
+> Acknowledgement state must not be confused with the event being acknowledged.
+
+## Refined feedback model
 
 ```text
 Intent
   ↓
-Local acknowledgement
+Lifecycle permission
+  ↓
+Local busy acknowledgement
   ↓
 Authoritative operation
   ↓
-Resolved outcome
+Outcome classification
   ↓
-Persistent consequence or recovery
+Persistent consequence secured
+  ↓
+Cleanup or recovery
+  ↓
+User feedback
 ```
 
-Feedback must remain attached to the action or state change that produced it.
+Feedback remains attached to the action or state change that produced it, while cleanup follows confirmed truth.
 
 ## Candidate laws under review
 
@@ -155,14 +231,19 @@ Feedback must remain attached to the action or state change that produced it.
 10. **Cross-surface commands require identity and idempotent consumption.**
 11. **User cancellation is not system failure.**
 12. **Fallbacks preserve intent without fabricating equivalence.**
+13. **Persisted presentation state is subordinate to authoritative revalidation.**
+14. **Destructive cleanup follows confirmed mutation.**
+15. **Acknowledgement does not create the event it acknowledges.**
+16. **Partial success remains legible as partial success.**
+17. **Canonical unresolved consequences remain recoverable without local metadata.**
 
 ## Contradiction searches required
 
 - My Finance optimistic updates and reconciliation states.
+- My Finance Advisor approval outcomes and recoverable state.
 - My Finance dock, Reading Pill and contextual action state ownership.
 - iVisit payment-to-tracking handoff.
-- iVisit screen-level rating recovery.
-- iVisit cancellation failure feedback and confirmation semantics.
+- iVisit cancellation failure feedback at the rendered surface.
 - WetinDey contribution confirmation and freshness states.
 
 ## Deliverables
@@ -174,10 +255,12 @@ Feedback must remain attached to the action or state change that produced it.
 - [x] Audit complete tracking controller outcomes.
 - [x] Audit rating-claim persistence before follow-up presentation.
 - [x] Audit cancellation and destructive-action policy ownership.
-- [ ] Audit screen-level rating restoration, close, skip and submit.
+- [x] Audit screen-level rating restoration, close, skip and submit.
+- [x] Audit responder-owned completion and arrival acknowledgement.
+- [x] Record partial-success feedback.
 - [ ] Audit payment-to-tracking recovery.
 - [ ] Compare with My Finance optimistic and reconciled state.
-- [ ] Write feedback grammar.
+- [ ] Write feedback grammar specification.
 - [ ] Run constitutional promotion review.
 - [ ] Define implementation and verification contracts.
 
