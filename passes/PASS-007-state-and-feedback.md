@@ -65,6 +65,66 @@ Candidate rule:
 
 > The interface may reveal an action only when the lifecycle model says the action is valid; visual prominence cannot create permission.
 
+### Tracking controller outcomes
+
+The tracking controller now provides source-level evidence for a complete feedback sequence:
+
+```text
+Intent
+  ↓
+Lifecycle permission check
+  ↓
+Local action acknowledgement
+  ↓
+Authoritative operation
+  ↓
+Resolved success, failure or cancellation
+  ↓
+Persistent consequence secured
+  ↓
+Presentation transition or recovery
+```
+
+The controller owns orchestration and feedback, not lifecycle truth.
+
+#### Busy ownership
+
+`runBusyAction` attaches pending state to an action key and clears it in `finally`. The bottom action explicitly recomputes from `busyAction`, preventing a stale enabled control during work.
+
+Candidate rule:
+
+> Foreground asynchronous work must remain owned by the action that initiated it and must clear through a guaranteed terminal path.
+
+#### Completion before cleanup
+
+Ambulance and bed completion defer cleanup. After authoritative completion succeeds, the controller persists a rating-recovery claim before opening the follow-up rating state.
+
+Candidate rules:
+
+> A terminal operation must secure its persistent follow-up consequence before transient presentation state is cleaned up.
+
+> Completion and follow-up are separate contracts: follow-up failure must not undo committed lifecycle truth, and recovery must reconstruct the follow-up.
+
+#### Destructive permission
+
+Cancellation handlers only enter the destructive-action model when lifecycle policy permits cancellation. A destructive control is therefore the visible end of lifecycle permission, not a local dismissal affordance.
+
+#### Cross-surface command safety
+
+Header action requests carry an execution identity, are rejected when already handled, are revalidated against current policy, and are then consumed.
+
+Candidate rule:
+
+> Cross-surface action requests must carry identity, be revalidated at the destination and be consumed idempotently.
+
+#### Intent-preserving fallback
+
+ETA sharing distinguishes user cancellation from system failure and falls back to clipboard only when sharing is unavailable. The fallback reports its actual outcome.
+
+Candidate rule:
+
+> Preserve user intent through the nearest honest fallback without pretending the fallback is equivalent to the preferred capability.
+
 ## Feedback model under investigation
 
 ```text
@@ -90,14 +150,19 @@ Feedback must remain attached to the action or state change that produced it.
 5. **One semantic snapshot should govern one complex surface.**
 6. **Persistent consequences must outlive transient phases.**
 7. **Recovery is part of the primary interaction contract, not an afterthought.**
+8. **Foreground work remains attached to its initiating action.**
+9. **Terminal operations secure follow-up recovery before cleanup.**
+10. **Cross-surface commands require identity and idempotent consumption.**
+11. **User cancellation is not system failure.**
+12. **Fallbacks preserve intent without fabricating equivalence.**
 
 ## Contradiction searches required
 
 - My Finance optimistic updates and reconciliation states.
 - My Finance dock, Reading Pill and contextual action state ownership.
 - iVisit payment-to-tracking handoff.
-- iVisit completion and rating recovery.
-- iVisit cancellation and destructive-action ownership.
+- iVisit screen-level rating recovery.
+- iVisit cancellation failure feedback and confirmation semantics.
 - WetinDey contribution confirmation and freshness states.
 
 ## Deliverables
@@ -106,9 +171,11 @@ Feedback must remain attached to the action or state change that produced it.
 - [x] Record the initial state hierarchy.
 - [x] Record request-scoped transient evidence.
 - [x] Record snapshot-before-presentation architecture.
-- [ ] Audit complete tracking controller outcomes.
-- [ ] Audit rating persistence and recovery.
-- [ ] Audit cancellation and destructive transitions.
+- [x] Audit complete tracking controller outcomes.
+- [x] Audit rating-claim persistence before follow-up presentation.
+- [x] Audit cancellation and destructive-action policy ownership.
+- [ ] Audit screen-level rating restoration, close, skip and submit.
+- [ ] Audit payment-to-tracking recovery.
 - [ ] Compare with My Finance optimistic and reconciled state.
 - [ ] Write feedback grammar.
 - [ ] Run constitutional promotion review.
