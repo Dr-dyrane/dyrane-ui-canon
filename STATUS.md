@@ -28,6 +28,7 @@ Extract the durable Dyrane UI system from the portfolio, validate it across prod
 - Current map sheet architecture audit.
 - Source-level shell, detent and gesture audit.
 - Active motion, interaction, accessibility, navigation, state and feedback passes.
+- Tracking runtime, controller, rating recovery, cancellation and responder-owned completion audits.
 
 ## Current evidence-backed position
 
@@ -52,11 +53,12 @@ iVisit remains the active archaeology stream and the strongest source for:
 - lifecycle-aware tracking;
 - spatial navigation;
 - direct-manipulation sheet motion;
-- state ownership under live operational pressure.
+- state ownership under live operational pressure;
+- recovery across phase transitions and app interruption.
 
 ### State constitution finding
 
-PASS-007 is now active.
+PASS-007 is active.
 
 The current state hierarchy is:
 
@@ -72,14 +74,38 @@ Presentation state
 Animation state
 ```
 
-The tracking runtime provides source-level evidence that:
+The latest iVisit evidence adds:
 
-- ETA progress cannot manufacture arrival;
-- transient route evidence must match the active request key;
-- recovered persistent values outrank transient fallbacks;
-- one semantic snapshot governs view state and action eligibility;
-- action availability follows lifecycle policy, not layout convenience;
-- progress values are process-specific readings, not silent lifecycle substitutes.
+- consequences that must survive a phase transition are owned above the initiating phase;
+- persisted presentation state is revalidated against canonical visits;
+- local recovery claims assist recovery but do not replace server truth;
+- duplicate recovery paths are closed before terminal cleanup;
+- cancellation clears local trip state only after authoritative success;
+- patient completion cannot manufacture responder-owned completion;
+- arrival acknowledgement confirms an existing event rather than creating arrival;
+- partial success reports committed and unresolved results separately.
+
+### Feedback model
+
+The working sequence is now:
+
+```text
+Intent
+  ↓
+Lifecycle permission
+  ↓
+Local busy acknowledgement
+  ↓
+Authoritative operation
+  ↓
+Outcome classification
+  ↓
+Persistent consequence secured
+  ↓
+Cleanup or recovery
+  ↓
+User feedback
+```
 
 ### My Finance bottom architecture finding
 
@@ -89,7 +115,7 @@ My Finance provides strong product-level evidence for separating:
 - **Dock Pill** — where the user can go;
 - **Action Pill / Action Orb** — what the user can do now.
 
-This track is queued for cross-validation and does not replace the active iVisit workstream.
+This track remains queued for cross-validation and does not replace the active iVisit workstream.
 
 ### Motion finding
 
@@ -113,7 +139,7 @@ The current model separates truth layer, viewport, persistent shell, phase and d
 - Structured project audits: My Finance, iVisit Console, iVisit App.
 - Dated evolution milestones documented: more than 15.
 - Active passes: 7.
-- Candidate rules documented: more than 45.
+- Candidate rules documented: more than 55.
 - Final canon laws promoted: 0.
 - Reference profiles completed: 0.
 - Automated cross-repository canon checks: 0.
@@ -134,14 +160,15 @@ The current model separates truth layer, viewport, persistent shell, phase and d
 
 `continue` now means:
 
-1. Finish `useMapTrackingController` through completion, cancellation, rating recovery and destructive actions.
-2. Inspect `mapTracking.actions.js`, `mapTracking.snapshot.js` and `mapTracking.model.js`.
-3. Audit payment-to-tracking recovery and persistent consequences.
+1. Audit payment-to-tracking recovery and interruption handling.
+2. Inspect cancellation failure messaging at the final rendered surface.
+3. Inspect `mapTracking.actions.js`, `mapTracking.snapshot.js` and `mapTracking.model.js` for policy duplication or drift.
 4. Audit camera padding, map fitting and viewport authority in active `/map` implementation.
 5. Build the phase-by-phase accessibility matrix.
 6. Search the map source for reduced motion, accessibility actions, announcements and focus management.
-7. Return to the My Finance Reading Pill only as a cross-validation stream after the current iVisit state wave.
-8. Update PASS-002 through PASS-007 and this file after each wave.
+7. Cross-validate PASS-007 against My Finance optimistic mutations, reconciliation and Advisor approval recovery.
+8. Return to the Reading Pill as a cross-validation stream only after the current iVisit state checkpoint.
+9. Update PASS-002 through PASS-007 and this file after each wave.
 
 ## Resume protocol
 
@@ -156,9 +183,11 @@ Read in order:
 7. `passes/PASS-006-navigation.md`
 8. `passes/PASS-007-state-and-feedback.md`
 9. `research/projects/ivisit-app-tracking-state-runtime.md`
-10. `research/projects/ivisit-app.md`
-11. `research/projects/ivisit-app-current-map-sheet-system.md`
-12. `research/projects/ivisit-app-map-sheet-shell-audit.md`
-13. `research/projects/planned-reading-pill.md`
+10. `research/projects/ivisit-app-tracking-controller-state-feedback.md`
+11. `research/projects/ivisit-app-rating-recovery-and-cancellation.md`
+12. `research/projects/ivisit-app.md`
+13. `research/projects/ivisit-app-current-map-sheet-system.md`
+14. `research/projects/ivisit-app-map-sheet-shell-audit.md`
+15. `research/projects/planned-reading-pill.md`
 
 Continue from **Immediate next actions** without restarting the inventory or repeating planning.
